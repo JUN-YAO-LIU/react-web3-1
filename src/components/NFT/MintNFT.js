@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { shareTokenABI, CONTRACT_ADDRESS } from '../../ABIs/PICTokenABI'
 
-function GetBaseUri(props) {
+function MintNFT(props) {
 
     const [baseUri, setState] = useState('')
 
@@ -30,18 +30,19 @@ function GetBaseUri(props) {
                     alert("Fail");
                 });
             console.log(symbol)
-            alert(symbol)
         }
 
     }
 
     return (
         <>
-            <button type='button' onClick={web3GetBaseUri}>GetBaseUri</button>
+            <div>
+                <button type='button' onClick={web3GetBaseUri}>MintNFT</button>
+            </div>
         </>
     )
 
 }
 
 
-export default GetBaseUri
+export default MintNFT

@@ -26,7 +26,7 @@ const ConnectWallet = (props) => {
             const provider = detectProvider()
 
             console.log(provider)
-            alert(provider.chainId)
+            // alert(provider.chainId)
 
             if (provider) {
                 await provider.request({ method: 'eth_requestAccounts' });
@@ -52,7 +52,7 @@ const ConnectWallet = (props) => {
     return (
         <div className="app">
 
-            <h1 class="title">React dApp connect to the MetaMask using We3.js</h1>
+            <h1 class="title">React dApp connect to the MetaMask using Web3.js</h1>
 
             <div className="app-wrapper">
                 {!isConnected && (
@@ -74,7 +74,7 @@ const ConnectWallet = (props) => {
                     </div>
                     <div>
                         <button className="app-buttons__logout" onClick={onDisconnect}>
-                            Disconnect
+                            SignOut
                         </button>
                     </div>
                 </div>
