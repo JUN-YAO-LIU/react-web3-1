@@ -1,5 +1,8 @@
 import React, { Suspense, useState } from 'react'
+import { Breadcrumb,theme,Layout} from 'antd';
 import styled from 'styled-components'
+
+const { Content } = Layout;
 
 const MainContainer = styled.div`
   width: 98%;
@@ -12,11 +15,19 @@ const MainContainer = styled.div`
 
 const AppContent = () => {
     return (
-      <MainContainer>
-        <Suspense>
-          asdf
-        </Suspense>
-      </MainContainer>
+      <>
+          <Content
+          style={{
+            margin: '24px 16px',
+            padding: 24,
+            minHeight: 280,
+            background: theme.useToken(),
+          }}
+        >
+          Content
+        </Content>
+      </>
+     
     )
   }
   

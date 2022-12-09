@@ -23,34 +23,25 @@ const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, i
 const AppSidebar = () => {
   return (
     <>
-      <Sider width={200} style={{ background: theme.useToken() }}>
-        <Menu
-          mode="inline"
-          defaultSelectedKeys={['1']}
-          defaultOpenKeys={['sub1']}
+        <Sider
+          width={200}
           style={{
-            height: '100%',
-            borderRight: 0,
+            background: theme.useToken(),
           }}
-          items={items2}
-        />
-      </Sider>
+        >
+          <div style={{height:'60px',color:'white',fontSize:'25px',padding:'10px',textAlign:'center'}}>logo</div>
+          <Menu
+            mode="inline"
+            defaultSelectedKeys={['1']}
+            defaultOpenKeys={['sub1']}
+            style={{
+              height: '100%',
+              borderRight: 0,
+            }}
+            items={items2}
+          />
+        </Sider>
     </>
-
-
-    // <div style={{ width: '200px', display: 'grid', position: 'fixed' }}>
-    //   <Menu
-    //     mode="inline"
-    //     defaultSelectedKeys={['1']}
-    //     defaultOpenKeys={['sub1']}
-    //     style={{
-    //       height: '100%',
-    //       borderRight: 0,
-    //     }}
-    //     items={items2}
-    //   />
-    // </div>
-
   )
 }
 

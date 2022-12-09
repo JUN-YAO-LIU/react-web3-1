@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios";
 
 const service = axios.create({
-    baseURL: "https://randomuser.me/api",
+    baseURL: "https://dev-numiner-admin.azurewebsites.net",
     timeout: 6000,
     retry: 3,
     retryDelay: 1000,

@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom'
 import Web3 from 'web3'
-import './CSS/all.css'
 
-import ConnectWallet from './components/ConnectWallet'
+import ConnectWallet from './components/wallet/ConnectWallet'
 import MintNFT from './components/NFT/MintNFT'
 import GetNFTList from './components/NFT/GetNFTList'
 import TransferNFT from './components/NFT/TransferNFT'
-import { DatePicker } from 'antd'
-import DefaultLayout from './layout/DefaultLayout'
+import DefaultLayout from './components/layout1/DefaultLayout'
 import About from './pages/About'
 import TestAPIPage from './pages/TestAPI/TestAPIPage'
 
@@ -19,12 +17,16 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<DefaultLayout/>}></Route>
-        <Route path="/About" element={<About/>}></Route>
-        <Route path="/TestAPI" element={<TestAPIPage/>}></Route>
+        <Route path="*"
+          name="home"
+          element={<DefaultLayout />}
+        />
+        <Route path="/" element={<DefaultLayout />}></Route>
+        <Route path="/About" element={<About />}></Route>
+        <Route path="/TestAPI" element={<TestAPIPage />}></Route>
       </Routes>
 
-      {/* <DatePicker />
+      {/*
       <ConnectWallet trxObj={trxObj} setTransction={setTransction} />
       <MintNFT trxObj={trxObj} setTransction={setTransction} />
       <GetNFTList trxObj={trxObj} nftList={nftList} setNFTList={setNFTList} />
