@@ -37,11 +37,29 @@ const DefaultLayout = () => {
             },
             {
               key: '2',
+              icon: <UserOutlined />,
+              label: (
+                <a href="/Register" rel="noopener noreferrer">
+                  Register
+                </a>
+              ),
+            },
+            {
+              key: '3',
+              icon: <UserOutlined />,
+              label: (
+                <a href="/Login" rel="noopener noreferrer">
+                  Login
+                </a>
+              ),
+            },
+            {
+              key: '4',
               icon: <VideoCameraOutlined />,
               label: 'nav 2',
             },
             {
-              key: '3',
+              key: '5',
               icon: <UploadOutlined />,
               label: 'nav 3',
             },
