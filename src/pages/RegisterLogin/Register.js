@@ -10,6 +10,8 @@ import {
     Input,
     Checkbox,
 } from "antd"
+import  CreateAccount from "../../components/wallet/CreateWeb3Account"
+import  SendTransaction from "../../components/wallet/SendTransaction"
 
 const { Header, Footer, Content } = Layout;
 
@@ -38,14 +40,20 @@ const GetVerificationBtn = () => {
     );
 };
 
+const CreateWeb3Account = () => {
+    CreateAccount()
+}
+
 
 const Register = () => {
     const onFinish = (values) => {
         console.log("Success:", values);
+        CreateWeb3Account();
     };
 
     const onFinishFailed = (errorInfo) => {
-        console.log("Failed:", errorInfo);
+       //  console.log("Failed:", errorInfo);
+        SendTransaction()
     };
 
     return (
@@ -95,8 +103,6 @@ const Register = () => {
                                     </a>
                                 </Checkbox>
                             </Form.Item> */}
-
-
 
                             <Form.Item>
                                 <Button
